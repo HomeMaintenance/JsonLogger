@@ -8,7 +8,7 @@ using milliseconds = std::chrono::duration<double, std::milli>;
 class JsonLogger{
 public:
     JsonLogger(std::string fileName);
-    ~JsonLogger();
+    virtual ~JsonLogger();
     virtual void add_datapoint(milliseconds time, const Json::Value& input);
     int get_counter() const;
 
