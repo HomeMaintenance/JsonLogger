@@ -1,4 +1,6 @@
 #include "JsonLogger.h"
+#include <fstream>
+#include <algorithm>
 
 JsonLogger::JsonLogger(std::string fileName):_fileName(fileName){
     std::replace( _fileName.begin(), _fileName.end(), '.', '_');
