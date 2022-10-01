@@ -46,7 +46,9 @@ TEST(Creation, Unique_Pointer){
     Json::Value json;
     json["value"] = 0;
     logger->add_datapoint(milliseconds(0), json);
+    EXPECT_TRUE(logger);
     logger.reset();
+    EXPECT_FALSE(logger);
 
     const auto file_contents = readFile("test_unique.json");
     ASSERT_TRUE(file_contents.size() > 0);
