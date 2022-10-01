@@ -26,3 +26,5 @@ target_link_libraries(JsonLogger PUBLIC
     JsonCpp::JsonCpp
 )
 endif()
+
+add_subdirectory(test)
